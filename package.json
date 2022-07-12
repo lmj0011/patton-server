@@ -1,0 +1,39 @@
+{
+  "name": "patton-server",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": ">=14.19.3 <15",
+    "npm": "~6.14.17"
+  },
+  "scripts": {
+    "build": "npx tsc",
+    "prod:serve": "npm run build && npx pm2 start --name patton-server ./dist/index.js",
+    "dev:serve": "npx nodemon ./src/index.ts",
+    "pm2:command" : "npx pm2"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@bull-board/express": "3.11.1",
+    "@nastyox/rando.js": "2.0.5",
+    "bull-board": "2.1.3",
+    "bullmq": "1.85.4",
+    "chalk": "4.1.2",
+    "express": "4.17.3",
+    "ioredis": "4.28.5",
+    "randoma": "1.3.0",
+    "socket.io": "4.5.1"
+  },
+  "devDependencies": {
+    "@types/express": "4.17.13",
+    "@types/ioredis": "4.28.10",
+    "@types/node": "17.0.41",
+    "nodemon": "2.0.16",
+    "pm2": "5.2.0",
+    "ts-node": "10.8.1",
+    "tsconfig-paths": "4.0.0",
+    "typescript": "4.7.3"
+  }
+}
