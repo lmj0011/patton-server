@@ -6,11 +6,10 @@ import { RedditThing } from './RedditThing';
 const { rando, randoSequence } = require('@nastyox/rando.js');
 
 const redisConnection = new Redis({
-  host: "localhost",
+  host: process.env.REDIS_SERVICE_HOST || "locahost",
   port: 6379,
   maxRetriesPerRequest: null
 });
-
 
 export class QueueManager {
     readonly thingsToUpvoteQueue = new Queue('ThingsToUpvoteQueue', { connection: redisConnection });

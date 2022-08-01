@@ -9,7 +9,7 @@ import { RedditThing } from './RedditThing';
 const app = express();
 const queueManager = new QueueManager();
 const randoma = new Randoma({seed: 512});
-const port = process.env.PORT || 3000;
+const port = 3000;
 
 const expressServer = app.listen(port, () => {
   console.log(`Server listening at port ${port}`);

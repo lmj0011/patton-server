@@ -11,7 +11,7 @@
     "build": "npx tsc",
     "prod:serve": "npm run build && npx pm2 start --name patton-server ./dist/index.js",
     "dev:serve": "npx nodemon ./src/index.ts",
-    "pm2:command" : "npx pm2"
+    "pm2:command": "npx pm2"
   },
   "author": "",
   "license": "ISC",
@@ -34,6 +34,7 @@
     "pm2": "5.2.0",
     "ts-node": "10.8.1",
     "tsconfig-paths": "4.0.0",
-    "typescript": "4.7.3"
+    "typescript": "4.7.3",
+    "wscat": "5.2.0"
   }
 }
